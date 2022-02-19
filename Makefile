@@ -13,4 +13,7 @@ clippy:
 	python clippy.py ~/Documents/kindle-clippings--$(DATE).txt
 
 marky:
-	./marky.py collection.json output/
+	python marky.py collection.json output/
+
+dates:
+	rg -A 3 '"title"' collection.json | less -S
