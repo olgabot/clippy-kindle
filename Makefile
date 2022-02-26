@@ -7,10 +7,10 @@ test:
 all: ru2en clippy marky
 
 ru2en:
-	python ClippyKindle/russian-to-english.py /Volumes/Kindle/documents/My\ Clippings.txt ~/Documents/$KINDLE_CLIPPINGS
+	python ClippyKindle/russian-to-english.py /Volumes/Kindle/documents/My\ Clippings.txt $(KINDLE_CLIPPINGS)
 
 clippy:
-	python clippy.py ~/Documents/kindle-clippings--$(DATE).txt
+	python clippy.py $(KINDLE_CLIPPINGS)
 
 marky:
 	python marky.py collection.json output/
