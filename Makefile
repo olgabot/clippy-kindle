@@ -13,7 +13,7 @@ clippy:
 	python clippy.py $(KINDLE_CLIPPINGS)
 
 marky:
-	python marky.py collection.json output/
+	python marky.py --settings settings.json collection.json output/
 
 dates:
-	rg -A 3 '"title"' collection.json | less -S
+	 | tail -n 20rg -A 3 '"title"' collection.json
